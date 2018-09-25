@@ -1,0 +1,23 @@
+{
+  "name": "crypto-app",
+  "version": "1.0.0",
+  "description": "Crypto-currency app notify you when yours crypto's have reach your choosen price",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Remi-Guijarro/crypto-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Remi-Guijarro/crypto-app/issues"
+  },
+  "homepage": "https://github.com/Remi-Guijarro/crypto-app#readme",
+  "devDependencies": {
+    "electron": "3.0.0"
+  }
+}
