@@ -1,9 +1,12 @@
 const {app, BrowserWindow,Menu} = require('electron')
+const path = require('path')
+const url = require('url')
+const shell = require('electron').shell
   
   // Gardez une reference globale de l'objet window, si vous ne le faites pas, la fenetre sera
   // fermee automatiquement quand l'objet JavaScript sera garbage collected.
   let win
-  
+
   function createWindow () {
     // Créer le browser window.
     win = new BrowserWindow({width: 600, height:250})
@@ -24,8 +27,15 @@ const {app, BrowserWindow,Menu} = require('electron')
         {
             label: 'Menu',
             submenu:[
-                {label:'Adjust notification value'},
-                {label:'CoinMarketCap'},
+                {
+                  label:'Adjust notification value',
+                },
+                {
+                  label:'CoinMarketCap',
+                  click(){
+                    shell.openExternal('https://coinmarketcap.com')
+                  }
+                },
                 {
                     label:'Exit',
                     click(){
@@ -42,7 +52,7 @@ const {app, BrowserWindow,Menu} = require('electron')
   // Cette méthode sera appelée quant Electron aura fini
   // de s'initialiser et sera prêt à créer des fenêtres de navigation.
   // Certaines APIs peuvent être utilisées uniquement quand cet événement est émit.
-  app.on('ready', createWindow)
+  app.on("ready",createWindow)
   
   // Quitte l'application quand toutes les fenêtres sont fermées.
   app.on('window-all-closed', () => {
