@@ -11,7 +11,7 @@ const shell = require('electron').shell
     // Créer le browser window.
     win = new BrowserWindow({width: 600, height:250})
     // et charge le index.html de l'application.
-    win.loadFile('index.html')
+    win.loadFile('src/index.html')
     // Ouvre les DevTools.
     //webContents.openDevTools()
   
@@ -36,6 +36,7 @@ const shell = require('electron').shell
                     shell.openExternal('https://coinmarketcap.com')
                   }
                 },
+                {type : 'separator'},
                 {
                     label:'Exit',
                     click(){
