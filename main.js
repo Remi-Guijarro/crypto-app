@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow,Menu} = require('electron')
   
   // Gardez une reference globale de l'objet window, si vous ne le faites pas, la fenetre sera
   // fermee automatiquement quand l'objet JavaScript sera garbage collected.
@@ -6,13 +6,11 @@ const {app, BrowserWindow} = require('electron')
   
   function createWindow () {
     // Créer le browser window.
-    win = new BrowserWindow({width: 800, height: 600})
-  
+    win = new BrowserWindow({width: 600, height:250})
     // et charge le index.html de l'application.
     win.loadFile('index.html')
-  
     // Ouvre les DevTools.
-    win.webContents.openDevTools()
+    //webContents.openDevTools()
   
     // Émit lorsque la fenêtre est fermée.
     win.on('closed', () => {
@@ -21,6 +19,24 @@ const {app, BrowserWindow} = require('electron')
       // où vous devez supprimer l'élément correspondant.
       win = null
     })
+
+    let menu = Menu.buildFromTemplate([
+        {
+            label: 'Menu',
+            submenu:[
+                {label:'Adjust notification value'},
+                {label:'CoinMarketCap'},
+                {
+                    label:'Exit',
+                    click(){
+                        app.quit()
+                    }
+                }
+            ]
+        }
+    ])
+
+    Menu.setApplicationMenu(menu)
   }
   
   // Cette méthode sera appelée quant Electron aura fini
