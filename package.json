@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Remi-Guijarro/crypto-app#readme",
   "devDependencies": {
     "electron": "3.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3"
   }
 }
