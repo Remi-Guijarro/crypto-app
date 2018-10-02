@@ -9,7 +9,7 @@ const shell = require('electron').shell
 
   function createWindow () {
     // Créer le browser window.
-    win = new BrowserWindow({width: 600, height:250})
+    win = new BrowserWindow({width: 600, height:250, minHeight:250,minWidth:600 })
     // et charge le index.html de l'application.
     win.loadFile('src/index.html')
     // Ouvre les DevTools.
