@@ -39,7 +39,7 @@
 
 .row.align-items-center.crypto{
     width: 100%;
-    height: 30%; 
+    min-height: 200px;
     text-align: center;
     margin: 0px;
     background-color: #ffffff;
