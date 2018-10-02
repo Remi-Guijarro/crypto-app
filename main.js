@@ -36,6 +36,12 @@ const shell = require('electron').shell
                     shell.openExternal('https://coinmarketcap.com')
                   }
                 },
+                {
+                  label:'Terminal',
+                  click(){
+                    win.webContents.openDevTools()
+                  }
+                },
                 {type : 'separator'},
                 {
                     label:'Exit',

@@ -1,0 +1,21 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+.firstButton{
+    background-color: cadetblue;
+}
+
+.secondButton{
+    background-color: coral;
+}
+
+.panneau-droit{
+    background-color:#6b6f75;
+}
+
+.centre{
+    background-color: #393b3f;
+}
+
+.content{
+
+}
